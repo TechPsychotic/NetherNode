@@ -1,3 +1,5 @@
 # Add these
 .env
 servers/
+go.sum
+go.mod
