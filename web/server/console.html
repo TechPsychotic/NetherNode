@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Server Console</title>
-    <link rel="stylesheet" href="/web/assets/css/styles.css">
+    <meta charset="UTF-8">
+    <title>Server Console - NetherNode</title>
+    <link rel="stylesheet" href="web/assets/css/styles.css">
 </head>
 <body>
-    <div class="console-header">
-        <h2 id="server-name">Server Console</h2>
-        <div class="controls">
-            <button onclick="window.history.back()">← Back</button>
-            <button id="restart-server">Restart</button>
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="web/assets/logo.svg" alt="NetherNode">
+            NetherNode
+        </a>
+    </nav>
+
+    <main class="console-container">
+        <div class="console-header">
+            <h2>Server Console - <span id="server-name">Loading...</span></h2>
+            <div class="server-controls">
+                <button class="btn-primary" id="restart-btn">Restart</button>
+                <button class="btn-outline" onclick="history.back()">Back</button>
+            </div>
         </div>
-    </div>
+        <div class="console-output" id="console-output"></div>
+    </main>
 
-    <pre id="console-output"></pre>
-
-    <script src="/web/assets/js/websocket.js"></script>
+    <script src="web/assets/js/websocket.js"></script>
 </body>
 </html>

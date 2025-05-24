@@ -3,35 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minecraft Server Manager</title>
-  <link rel="stylesheet" href="/web/assets/css/styles.css">
+  <title>NetherNode - Minecraft Server Hosting</title>
+  <link rel="stylesheet" href="web/assets/css/styles.css">
+  <link rel="icon" href="web/assets/images/logo.jpg" type="image/jpeg">
 </head>
 <body>
-  <nav class="navbar">
-    <a href="/" class="logo">
-      <img src="/web/assets/logo.svg" alt="Logo">
-      MineControl
-    </a>
-    
-    <ul class="nav-links">
-      <li><a href="#features">Features</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#docs">Docs</a></li>
-    </ul>
-    
-    <div class="nav-actions">
-      <button class="btn-primary" id="create-server">+ New Server</button>
-    </div>
-  </nav>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="web/assets/images/logo.jpg" alt="NetherNode Logo">
+        <span>NetherNode</span>
+      </div>
+      <ul class="nav-links" style="none">
+        
+        <li><a href="#about">About Us</a></li>
+        
+      </ul>
+      <a href="/login" class="btn-signup">Sign In</a>
+    </nav>
+  </header>
 
-  <main class="dashboard">
-    <h1>Your Servers</h1>
-    
-    <div class="server-list" id="server-list">
-      <!-- Server cards will be dynamically inserted here -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>NetherNode Services</h1>
+        <p>NetherNode lets you make your wildest dreams come true. We create the most optimal and qualitative service for your game server.</p>
+        <a href="/login" class="btn-signup">Our Services</a>
+      </div>
+      <div class="hero-image">
+        <img src="web/assets/images/minecraft-characters.png" alt="Minecraft Characters">
+      </div>
     </div>
-  </main>
+  </section>
 
-  <script src="/web/assets/js/app.js"></script>
+  <script src="web/assets/js/app.js"></script>
 </body>
 </html>

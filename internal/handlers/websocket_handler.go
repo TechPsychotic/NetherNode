@@ -1,9 +1,9 @@
 package handlers
 
 import (
+    "NetherNode/internal/services"
     "github.com/gin-gonic/gin"
     "github.com/gorilla/websocket"
-    "your-project/internal/services"
 )
 
 var upgrader = websocket.Upgrader{
@@ -17,16 +17,10 @@ func WebSocketHandler(c *gin.Context) {
         return
     }
     
-    // Register client
-    services.RegisterWebSocketClient(conn)
-    
-    defer func() {
-        services.UnregisterWebSocketClient(conn)
-        conn.Close()
-    }()
+    services.RegisterWSClient(conn)
+    defer services.UnregisterWSClient(conn)
     
     for {
-        // Keep connection alive
         if _, _, err := conn.ReadMessage(); err != nil {
             break
         }
